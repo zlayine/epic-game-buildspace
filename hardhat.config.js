@@ -8,6 +8,9 @@ module.exports = {
     rinkeby: {
       url: `https://eth-rinkeby.alchemyapi.io/v2/${private.alchemy}`,
       accounts: [private.key],
+      gas: 2100000,
+      gasPrice: 8000000000,
+      saveDeployments: true,
     },
   },
 };

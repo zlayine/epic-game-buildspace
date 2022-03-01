@@ -10,24 +10,19 @@
             alt="Monty Python Gif"
           />
           <button class="cta-button connect-wallet-button" @click="connect">
-            Connect Wallet To Get Started
+            Connect Metamask To Get Started
           </button>
         </div>
         <select-character v-else-if="account && !characterNFT" />
         <arena v-else-if="account && characterNFT" />
       </div>
       <div class="footer-container">
-        <img
-          alt="Twitter Logo"
-          class="twitter-logo"
-          src="./assets/twitter-logo.svg"
-        />
         <a
           class="footer-text"
-          :href="twitter_link"
+          :href="footer_link"
           target="_blank"
           rel="noreferrer"
-          >built with @{{ twitter_handle }}</a
+          >{{ footer }}</a
         >
       </div>
     </div>
@@ -41,8 +36,8 @@ export default {
   name: "App",
   data() {
     return {
-      twitter_handle: "zouln96",
-      twitter_link: "https://twitter.com/zouln96",
+      footer: "Github repo",
+      footer_link: "https://cennz.net/",
     };
   },
   methods: {
